@@ -67,7 +67,7 @@ function deleteAccount(PDO $bdd, string $email): void {
  */
 function getAccountByEmail(PDO $bdd, string $email): ?array {
     try {
-        $requete = "SELECT id_account, firstname, lastname, email FROM account
+        $requete = "SELECT id_account, firstname, lastname, email, `password` FROM account
         WHERE email = ?";
         $req = $bdd->prepare($requete);
         $req->bindParam(1,$email, PDO::PARAM_STR);

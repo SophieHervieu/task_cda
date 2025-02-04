@@ -7,5 +7,8 @@
         <input type="submit" value="ajouter" name="submit">
     </form>
     <?= $message ?>
+    <ul>
+        <?= $items?>
+    </ul>
 </body>
 </html>
